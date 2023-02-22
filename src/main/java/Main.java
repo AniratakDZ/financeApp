@@ -16,8 +16,6 @@ public class Main {
 
     public static void main(String[] args) {
         final Window window = new Window();
-        final CalculatePane calculatePane = new CalculatePane();
-        window.add(calculatePane);
         window.setVisible(true);
     }
 }

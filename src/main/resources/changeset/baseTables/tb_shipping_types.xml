@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+            http://www.liquibase.org/xml/ns/dbchangelog-ext
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+	        http://www.liquibase.org/xml/ns/pro
+            http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <changeSet id="tb_shipping_types" author="fas">
+        <createTable tableName="tb_shipping_types">
+            <column name="autoid" type="numeric" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_shipping_types"/>
+            </column>
+            <column name="id" type="varchar">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+        <createSequence sequenceName="sq_shipping_types"/>
+    </changeSet>
+
+</databaseChangeLog>

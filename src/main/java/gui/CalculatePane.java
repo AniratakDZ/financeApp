@@ -19,14 +19,20 @@ import static enums.PackingPrice.*;
 import static java.lang.Double.parseDouble;
 import static java.lang.Math.round;
 import static java.lang.String.valueOf;
+import static java.util.Arrays.asList;
 
 /**
  * @author <a href="mailto:fabian.stetter@regitstudios.de">Fabian Stetter</a>
  */
 public class CalculatePane extends JPanel {
 
-    private List<PackingPrice> packingPrices = new ArrayList<>(Arrays.asList(BIG_POUCH, TINY_POUCH, BIG_KARTON_5KG,
-            BIG_KARTON_2KG, MIDDLE_KARTON_5KG, MIDDLE_KARTON_2KG, MIDDLE_KARTON_2KG_AGE_VERIFICATION, TINY_KARTON_5KG, TINY_KARTON_2KG));
+    private final List<PackingPrice> packingPrices = new ArrayList<>(asList(
+            KLEINE_VERSANDTASCHE_NATIONAL, KLEINE_VERSANDTASCHE_INTERNATIONAL,
+            GROSSE_VERSANDTASCHE_ALS_GROSSBRIEF_NATIONAL, GROSSE_VERSANDTASCHE_ALS_GROSSBRIEF_INTERNATINAL,
+            GROSSE_VERSANDTASCHE_ALS_MAXIBRIEF_NATIONAL, GROSSE_VERSANDTASCHE_ALS_MAXIBRIEF_INTERNATIONAL,
+            PAKET_2KG_NATIONAL, PAKET_2KG_INTERNATIONAL,
+            PAKET_5KG_NATIONAL, PAKET_5KG_INTERNATIONAL,
+            PAKET_10KG_NATIONAL, PAKET_10KG_INTERNATIONAL));
 
     public CalculatePane() {
         setLayout(null);
